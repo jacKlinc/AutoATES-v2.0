@@ -12,3 +12,10 @@ dependencies = [
 
 [tool.uv.extra-build-dependencies]
 gdal = ["setuptools"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["PRA*", "FlowPy_detrainment*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.py"]
