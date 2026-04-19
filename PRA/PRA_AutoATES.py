@@ -288,7 +288,7 @@ def PRA(forest_type, DEM, FOREST, radius, prob, winddir, windtol, pra_thd, sf):
         if forest_type in ['no_forest']:
             f.write("No forest input given\n")
 
-    if forest_type in ['pcc', 'stems']:
+    if forest_type in ['pcc', 'stems', 'bav', 'sen2cc']:
         with rasterio.open(FOREST) as src:
             forest = src.read()
 
